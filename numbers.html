@@ -3,11 +3,22 @@
 <head>
 <script>
 var number = prompt ("please enter a number");
-var thousand = number / 1000 ;
-var hundreds = number / 100;
-var tens = number / 10;
-var ones = number / 1;
-console.log (thousand + " thousands");
+var thoumod = number % 1000
+var thoueven = number - thoumod
+var thou = thoueven / 1000 ;
+var hunmod = thoumod % 100
+var huneven = thoumod - hunmod
+var hun = huneven / 100;
+var tenmod = hunmod % 10
+var teneven = hunmod - tenmod
+var ten = teneven / 10;
+var onemod = tenmod % 1
+var oneeven = tenmod - onemod
+var one = oneeven / 1;
+console.log (thou + " thousands");
+console.log (hun + " hundreds");
+console.log (ten + " tens");
+console.log (one + " ones");
 </script>
 </head>
 <body>
